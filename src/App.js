@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom';
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import Footer from './components/Footer';
+import Header from './components/Header';
+import ProductOverview from './components/ProductOverView';
+import ProductList from './pages/ProductList';
+import ThankYou from './pages/ThankYou';
 
-function App() {
+const App = () => {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {location.pathname !== '/thank-you/Monstera' && (
+        <>
+          <Header />
+          <ProductOverview />
+        </>
+      )}
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/thank-you/:productName" element={<ThankYou />} />
+      </Routes>
+      {location.pathname !== '/thank-you/Monstera' && <Footer />}
+    </>
   );
-}
+};
 
-export default App;
+const MainApp = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default MainApp;

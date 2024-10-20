@@ -17,12 +17,12 @@ Designing the filter section was a key challenge. I focused on:
 ## How to Run the Project
 
 1. Clone the Repository:
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/Bharani0012/ecommer-listing.git
 
     Navigate to the Project Directory:
 
 
-cd your-repo-name
+cd ecommer-listing
 
 Install Dependencies:
 

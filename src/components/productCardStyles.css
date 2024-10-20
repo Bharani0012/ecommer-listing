@@ -1,0 +1,59 @@
+.product-card {
+    margin: 15px;
+    width: 250px;
+}
+
+.product-image-container {
+    border: 1px solid #000000;
+    position: relative;
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.view-product-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #165315;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.add-to-cart-btn{
+    border: none;
+    color: white;
+    background-color: #165315;
+    margin: 3px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.buy-or-rent-btn{
+    border: 1px solid #165315;
+    color: #165315;
+    margin: 3px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+.old-price{
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.new-price{
+    color: #5E5A5A;
+    font-weight: 700;
+}
